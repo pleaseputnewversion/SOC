@@ -15,11 +15,10 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Grant execute permission for Gradle
+        run: chmod +x gradlew
+
       - name: Build with Gradle
         run: ./gradlew build
 
-      - name: Upload JAR Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: Fabric-Mod-Jar
-          path: build/libs/*.jar
+      - name
