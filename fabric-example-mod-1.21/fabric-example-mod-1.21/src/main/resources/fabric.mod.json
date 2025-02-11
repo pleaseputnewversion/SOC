@@ -1,0 +1,25 @@
+{
+	"schemaVersion": 1,
+	"id": "soccerballmod",
+	"version": "${version}",
+	"name": "Soccer Ball Mod",
+	"description": "Adds a soccer ball entity to the game",
+	"authors": [
+		"YourName"
+	],
+	"contact": {
+		"homepage": "https://your-website.com",
+		"sources": "https://github.com/your-repository"
+	},
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"com.example.soccerballmod.SoccerBallMod"
+		]
+	},
+	"depends": {
+		"fabric-api": "*",
+		"minecraft": "1.21.4"
+	}
+}

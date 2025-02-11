@@ -1,0 +1,37 @@
+plugins {
+	id 'fabric-loom' version '1.1-SNAPSHOT'
+	id 'java'
+}
+
+group = 'com.example.soccerballmod'
+version = '1.0.0'
+archivesBaseName = 'soccerballmod'
+
+repositories {
+	mavenCentral()
+	maven { url = 'https://maven.fabricmc.net/' }
+}
+
+dependencies {
+	// Minecraft version
+	minecraft "com.mojang:minecraft:1.21.4"
+
+	// Yarn mappings for Minecraft
+	mappings "net.fabricmc:yarn:1.21.4+build.6:v2"
+
+	// Fabric API
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.version}"
+
+	// Loom for compiling and running
+	compileOnly 'net.fabricmc:fabric-loader:0.14.6'
+}
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)  // Set Java version (ensure you have JDK 17 or newer installed)
+	}
+}
+
+tasks.named('compileJava') {
+	options.encoding = 'UTF-8'
+}
